@@ -1,25 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { LayoutEngine } from '@sergeyvbo/layout-engine';
+
+function Layout(props: any) {
+  console.log(props);
+  return (
+    <div>
+      <h1>{props.name}</h1>
+      {props.children}
+    </div>
+  );
+}
+
+function View(props: any) {
+  console.log(props);
+  return (
+    <div>
+      <h3>{props.context?.name}</h3>
+      {JSON.stringify(props)}
+    </div>
+  );
+}
+
+function createLayout(componentName: string) {
+  return Layout;
+}
+function createView(componentName: string) {
+  return View;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LayoutEngine 
+      modelId={9}
+      createLayout={createLayout}
+      createView={createView}
+    />
   );
 }
 
