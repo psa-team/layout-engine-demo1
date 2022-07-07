@@ -1,30 +1,12 @@
 import { LayoutEngine } from '@sergeyvbo/layout-engine';
-
-function Layout(props: any) {
-  console.log(props);
-  return (
-    <div>
-      <h1>{props.name}</h1>
-      {props.children}
-    </div>
-  );
-}
-
-function View(props: any) {
-  console.log(props);
-  return (
-    <div>
-      <h3>{props.context?.name}</h3>
-      {JSON.stringify(props)}
-    </div>
-  );
-}
+import { layoutDictionary } from './lib/layoutDictionary';
+import { viewDictionary } from './lib/viewDictionary';
 
 function createLayout(componentName: string) {
-  return Layout;
+  return layoutDictionary[componentName];
 }
 function createView(componentName: string) {
-  return View;
+  return viewDictionary[componentName];
 }
 
 function App() {
