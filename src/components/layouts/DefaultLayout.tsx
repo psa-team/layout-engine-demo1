@@ -115,7 +115,7 @@ const DefaultLayout = ({title, children, ...other}: DefaultLayoutProps) => {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              {title}
+              Общий врачебный ракурс
             </Typography>
           </Toolbar>
         </AppBar>
