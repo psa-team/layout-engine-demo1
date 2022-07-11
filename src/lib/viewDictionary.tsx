@@ -1,6 +1,7 @@
 import React from "react";
 import Dashboard from "../components/views/Dashboard";
 import ModalForm from "../components/views/ModalForm";
+import VaccinationWidget from "../components/views/VaccinationWidget";
 
 const Page = (props: { title: string, children: any }) => {
   return (
@@ -15,7 +16,8 @@ const viewDictionary: { [id: string]: any } = {
   "dashboard": Dashboard,
   "dialog": ModalForm,
   "page": Page,
-  "pageOnNewTab": Page
+  "pageOnNewTab": Page,
+  "vaccinationWidget": VaccinationWidget
 }
 
 export { viewDictionary };

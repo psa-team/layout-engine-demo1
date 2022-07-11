@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { viewDictionary } from "../../lib/viewDictionary";
 import Widget from "./Widget";
 
 interface DashboardProps {
@@ -15,6 +16,10 @@ const Dashboard = ({ name, children, ...other }: DashboardProps) => {
   const context = (other as any).context;
   const widgets = Object.entries(context.content).map(item => {
     const [key,value] = item;
+    if (viewDictionary[key]){
+      const Widget = viewDictionary[key];
+      return <Widget/>;
+    }
     return (
       <Widget key={key} title={key} >
         <React.Fragment>
