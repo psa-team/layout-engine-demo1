@@ -13,7 +13,7 @@ function Copyright(props: any) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        Element Lab
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -133,18 +133,32 @@ const DefaultLayout = ({title, children, ...other}: DefaultLayoutProps) => {
             </IconButton>
           </Toolbar>
           <Divider />
+          <Typography
+              variant="h6"
+            >
+              Ракурс
+            </Typography>
           <List component='nav'>
-            <ListItemButton key={1}>
-              <ListItemIcon>
+            <ListItemButton key={1} selected={true}>
+              {/* <ListItemIcon>
                 <LayersIcon />
-              </ListItemIcon>
-              <ListItemText primary={'Общий врачебный ракурс'} />
+              </ListItemIcon> */}
+              <ListItemText primary={'Общий врачебный'} secondary="Врач, Амбулаторный прием"/>
             </ListItemButton>
             <ListItemButton key={2}>
-              <ListItemIcon>
-                <LayersIcon />
-              </ListItemIcon>
-              <ListItemText primary={'item2.name'} />
+              <ListItemText primary={'Акушер-гинеколог'}  secondary="Врач, Амбулаторный прием"/>
+            </ListItemButton>
+            <ListItemButton key={3}>
+              <ListItemText primary={'Первичная терапев. помощь'}  secondary="Врач, Амбулаторный прием"/>
+            </ListItemButton>
+            <ListItemButton key={4}>
+              <ListItemText primary={'Пациентский'}  secondary="Человек, Здоровый образ жизни"/>
+            </ListItemButton>
+            <ListItemButton key={5}>
+              <ListItemText primary={'Эпизоды заболеваний'}  secondary="Регулятор, Оценка персонального здоровья"/>
+            </ListItemButton>
+            <ListItemButton key={6}>
+              <ListItemText primary={'Оценка здоровья популяции'}  secondary="Регулятор, Оценка персонального здоровья"/>
             </ListItemButton>
           </List>
         </Drawer>
