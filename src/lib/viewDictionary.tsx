@@ -1,5 +1,8 @@
 import React from "react";
+import ClinicAttachmentWidget from "../components/views/ClinicAttachmentWidget";
 import Dashboard from "../components/views/Dashboard";
+import DisabilityWidget from "../components/views/DisabilityWidget";
+import DispensaryObservationWidget from "../components/views/DispensaryObservationWidget";
 import ModalForm from "../components/views/ModalForm";
 import VaccinationWidget from "../components/views/VaccinationWidget";
 
@@ -17,7 +20,10 @@ const viewDictionary: { [id: string]: any } = {
   "dialog": ModalForm,
   "page": Page,
   "pageOnNewTab": Page,
-  "vaccinationWidget": VaccinationWidget
+  "vaccinationWidget": VaccinationWidget,
+  "disabilityWidget": DisabilityWidget,
+  "dispensaryObservationWidget": DispensaryObservationWidget,
+  "clinicAttachmentWidget": ClinicAttachmentWidget,
 }
 
 export { viewDictionary };

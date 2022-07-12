@@ -1,4 +1,4 @@
-import { Paper, TextField, Typography } from "@mui/material";
+import { Paper, TextField, Typography, Divider } from "@mui/material";
 
 interface WidgetProps {
   title: string;
@@ -11,6 +11,7 @@ const Widget = (props: WidgetProps) => {
       <Typography>
         {props.title}
       </Typography>
+      <Divider />
       <br />
       {props.children}
     </Paper>
