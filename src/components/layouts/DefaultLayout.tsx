@@ -1,11 +1,10 @@
-import { Box, Container, CssBaseline, Divider, Grid, IconButton, Link, List, ListItemButton, ListItemIcon, ListItemText, Paper, Toolbar, Typography } from "@mui/material";
+import { Box, Container, CssBaseline, Divider, Grid, IconButton, Link, List, ListItemButton, ListItemIcon, ListItemText, Modal, Paper, Toolbar, Typography } from "@mui/material";
 import MuiDrawer from '@mui/material/Drawer';
 import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
 
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import LayersIcon from '@mui/icons-material/Layers';
 import { useState } from "react";
 
 function Copyright(props: any) {
